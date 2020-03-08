@@ -4,16 +4,16 @@ import isEqual from "lodash.isequal";
 export const checker = <P,>(
   Component: React.ComponentType<P>,
   checkEnabled: boolean = process.env.NODE_ENV !== "production"
-) => {
+): React.ComponentType<P> => {
   if (checkEnabled) {
     class Wrapper extends React.Component<P> {
-      componentDidUpdate(previousProps) {
+      componentDidUpdate(previousProps: P) {
         const props = this.props;
         const errorKeys = [];
 
         for (const key in props) {
-          const previousProp = previousProps[key];
-          const currentProp = props[key];
+          const previousProp = (previousProps as any)[key] as never;
+          const currentProp = (props as any)[key] as never;
           if (
             previousProp !== currentProp &&
             isEqual(previousProp, currentProp)

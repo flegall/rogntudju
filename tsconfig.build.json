@@ -1,0 +1,30 @@
+{
+  "exclude": [
+    "node_modules",
+    "dist",
+    "packages/*/src/**/*.spec.tsx",
+    "packages/*/src/**/*.spec.ts"
+  ],
+
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "listEmittedFiles": true,
+    "declaration": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "pretty": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true
+  }
+}

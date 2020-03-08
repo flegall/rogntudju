@@ -29,6 +29,7 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lerna": "lerna"
   }
 }
