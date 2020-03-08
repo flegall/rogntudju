@@ -1,0 +1,15 @@
+{
+  "exclude": ["node_modules", "dist"],
+
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@rogntudju/*": ["packages/*/src"]
+    },
+    "jsx": "react",
+    "esModuleInterop": true
+  }
+}
