@@ -13,6 +13,8 @@ module.exports = {
 
   moduleNameMapper: {
     // Allows direct access to monorepo packages when running tests
+    // Otherwise it would require rebuilding packages before running tests
+    // We don't want to have that.
     "^@rogntudju/(.*)$": "<rootDir>/packages/$1/src"
   }
 };

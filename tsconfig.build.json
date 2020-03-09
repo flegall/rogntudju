@@ -1,3 +1,4 @@
+// This configuration file is the one used to compile TS code to JS code.
 {
   "exclude": [
     "node_modules",
@@ -25,6 +26,8 @@
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "listFiles": true,
+    "diagnostics": true
   }
 }

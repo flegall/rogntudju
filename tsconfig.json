@@ -1,3 +1,4 @@
+// This configuration file is the one used by vscode to typecheck in the IDE
 {
   "extends": "./tsconfig.build.json",
   "exclude": ["node_modules", "dist"],
