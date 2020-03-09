@@ -2,7 +2,10 @@ import { createStore } from "redux";
 
 describe("rConnect()", () => {
   it("should build a specialized connect() implementation", () => {
-    function counter(state = 0, action: { type: "INCREMENT" | "DECREMENT" }) {
+    function counter(
+      state: number = 0,
+      action: { type: "INCREMENT" | "DECREMENT" }
+    ) {
       switch (action.type) {
         case "INCREMENT":
           return state + 1;
