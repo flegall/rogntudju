@@ -9,5 +9,10 @@ module.exports = {
   coverageDirectory: "coverage",
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom"
+  testEnvironment: "jsdom",
+
+  moduleNameMapper: {
+    // Allows direct access to monorepo packages when running tests
+    "^@rogntudju/(.*)$": "<rootDir>/packages/$1/src"
+  }
 };

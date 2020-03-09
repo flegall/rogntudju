@@ -1,12 +1,12 @@
-import React from "react";
+import React, { Component, ComponentType } from "react";
 import isEqual from "lodash.isequal";
 
 export const checker = <P,>(
-  Component: React.ComponentType<P>,
+  ComponentToCheck: ComponentType<P>,
   checkEnabled: boolean = process.env.NODE_ENV !== "production"
-): React.ComponentType<P> => {
+): ComponentType<P> => {
   if (checkEnabled) {
-    class Wrapper extends React.Component<P> {
+    class Wrapper extends Component<P> {
       componentDidUpdate(previousProps: P) {
         const props = this.props;
         const errorKeys = [];
@@ -30,10 +30,10 @@ export const checker = <P,>(
         }
       }
       render() {
-        return <Component {...this.props} />;
+        return <ComponentToCheck {...this.props} />;
       }
     }
     return Wrapper;
   }
-  return Component;
+  return ComponentToCheck;
 };

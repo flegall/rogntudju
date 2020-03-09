@@ -66,9 +66,7 @@ describe("checker HOC", () => {
     };
     const myLastName2 = { ...myLastName };
 
-    const { getByTestId, rerender } = render(
-      <Wrapped my={myLastName} also={myFirstName} />
-    );
+    const { rerender } = render(<Wrapped my={myLastName} also={myFirstName} />);
 
     expect(() => {
       rerender(<Wrapped my={myLastName2} also={myFirstName} />);
