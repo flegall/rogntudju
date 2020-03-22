@@ -1,22 +1,14 @@
-import { ComponentType } from "react";
 import { checker } from "@rogntudju/checker";
 
-export const rConnect = <A, B, C, D, P>(
-  connect: (
-    a: A,
-    b: B,
-    c: C,
-    d: D
-  ) => (component: ComponentType<P>) => ComponentType<P>,
+export const rConnect = <C>(
+  connect: C,
   checkEnabled: boolean = process.env.NODE_ENV !== "production"
-): ((
-  a: A,
-  b: B,
-  c: C,
-  d: D
-) => (component: ComponentType<P>) => ComponentType<P>) => (
-  a,
-  b,
-  c,
-  d
-) => component => connect(a, b, c, d)(checker(component, checkEnabled));
+): C => {
+  const connectAsAny = connect as any;
+  if (checkEnabled) {
+    return (((...args: any[]) => (component: any) =>
+      connectAsAny(...args)(checker(component)) as any) as unknown) as C;
+  } else {
+    return connect;
+  }
+};
