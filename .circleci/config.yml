@@ -24,7 +24,7 @@ jobs:
             - node_modules
             - ~/.cache/yarn
           key: v10-deps-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-      - run: yarn test
+      - run: yarn build
 
 workflows:
   version: 2
