@@ -27,7 +27,7 @@
     "noImplicitReturns": true,
     "noImplicitAny": true,
     "alwaysStrict": true,
-    "listFiles": true,
-    "diagnostics": true
+    "listFiles": false,
+    "diagnostics": false
   }
 }

@@ -33,7 +33,7 @@
     "jest": "jest --verbose",
     "tsc": "tsc",
     "prebuild": "npm t",
-    "build": "lerna run build",
+    "build": "npm run lerna run build",
     "lerna": "lerna"
   },
   "husky": {
