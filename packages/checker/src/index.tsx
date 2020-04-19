@@ -7,6 +7,8 @@ export const checker = <P,>(
 ): ComponentType<P> => {
   if (checkEnabled) {
     class Wrapper extends Component<P> {
+      // We could have written this with hooks, however I wanted
+      // rogntudju to work with older react versions.
       componentDidUpdate(previousProps: P) {
         const props = this.props;
         const errorKeys = [];
