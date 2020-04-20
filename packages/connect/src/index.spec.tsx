@@ -3,7 +3,7 @@ import { createStore } from "redux";
 import { Provider, connect } from "react-redux";
 import { render, act } from "@testing-library/react";
 
-import { rConnect } from "./index";
+import { buildConnect } from "./index";
 
 function counter(state: { value: number } = { value: 0 }) {
   return { ...state };
@@ -24,7 +24,7 @@ const mapsStateToProps = (state: { value: number }) => {
   return { value: array };
 };
 
-describe("rConnect()", () => {
+describe("buildConnect()", () => {
   let originalError: typeof console.error | null = null;
 
   beforeEach(() => {
@@ -40,7 +40,7 @@ describe("rConnect()", () => {
 
   it("should build a specialized connect() implementation that checks for useless rerenders", () => {
     const store = createStore(counter);
-    const rconnect = rConnect(connect, true);
+    const rconnect = buildConnect(connect, true);
     const ComponentWrapped = rconnect(mapsStateToProps)(Component);
 
     render(
@@ -58,7 +58,7 @@ describe("rConnect()", () => {
 
   it("should build a specialized connect() implementation that checks by default in dev mode", () => {
     const store = createStore(counter);
-    const rconnect = rConnect(connect);
+    const rconnect = buildConnect(connect);
     const ComponentWrapped = rconnect(mapsStateToProps)(Component);
 
     render(
@@ -76,7 +76,7 @@ describe("rConnect()", () => {
 
   it("should build a specialized connect() implementation that doesn't checks for useless rerenders when check is disabled", () => {
     const store = createStore(counter);
-    const rconnect = rConnect(connect, false);
+    const rconnect = buildConnect(connect, false);
     const ComponentWrapped = rconnect(mapsStateToProps)(Component);
 
     render(

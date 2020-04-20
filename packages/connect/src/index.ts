@@ -1,6 +1,6 @@
 import { checker } from "@rogntudju/checker";
 
-export const rConnect = <C>(
+export const buildConnect = <C>(
   connect: C,
   checkEnabled: boolean = process.env.NODE_ENV !== "production"
 ): C => {
