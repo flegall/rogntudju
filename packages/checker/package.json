@@ -1,6 +1,6 @@
 {
   "name": "@rogntudju/checker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "license": "MIT",
   "peerDependencies": {
@@ -20,5 +20,6 @@
     "clean": "rm -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn build"
-  }
+  },
+  "gitHead": "be3a2d0074303cef7fae5493c000fd9a48611011"
 }
