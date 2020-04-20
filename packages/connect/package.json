@@ -1,13 +1,13 @@
 {
   "name": "@rogntudju/connect",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@rogntudju/checker": "^0.0.6",
+    "@rogntudju/checker": "^0.0.7",
     "@testing-library/react": "^10.0.2"
   },
   "scripts": {
