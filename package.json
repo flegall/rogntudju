@@ -32,7 +32,7 @@
     "test": "npm-run-all -p tsc jest",
     "jest": "jest --verbose",
     "tsc": "tsc",
-    "prebuild": "npm t",
+    "prebuild": "yarn test",
     "build": "lerna run build"
   },
   "husky": {

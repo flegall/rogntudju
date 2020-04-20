@@ -16,9 +16,9 @@
     "react-dom": "^16.13.0"
   },
   "scripts": {
-    "build": "npm run clean && npm run compile",
+    "build": "yarn clean && yarn compile",
     "clean": "rm -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "yarn build"
   }
 }
