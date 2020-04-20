@@ -1,4 +1,6 @@
-# A specialized redux connect() implementation that checks for useless re-renders
+# `@rogntudju/connect`
+
+A specialized redux connect() implementation that detects useless re-renders in dev mode.
 
 ## Usage
 

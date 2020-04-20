@@ -1,4 +1,6 @@
-# A specialized checker HOC
+# `@rogntudju/checker`
+
+A specialized HOC that detects useless re-renders in dev mode.
 
 ## Usage
 
