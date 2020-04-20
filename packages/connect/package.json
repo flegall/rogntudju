@@ -1,6 +1,6 @@
 {
   "name": "@rogntudju/connect",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/index.js",
   "license": "MIT",
   "homepage": "https://github.com/flegall/rogntudju",
@@ -13,7 +13,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@rogntudju/checker": "^0.0.9"
+    "@rogntudju/checker": "^0.0.10"
   },
   "scripts": {
     "build": "yarn clean && yarn compile",

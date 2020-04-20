@@ -1,6 +1,6 @@
 {
   "name": "@rogntudju/checker",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/index.js",
   "license": "MIT",
   "homepage": "https://github.com/flegall/rogntudju",
