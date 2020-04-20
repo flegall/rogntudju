@@ -4,6 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "homepage": "https://github.com/flegall/rogntudju",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flegall/rogntudju.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",

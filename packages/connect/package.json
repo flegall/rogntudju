@@ -3,6 +3,12 @@
   "version": "0.0.7",
   "main": "dist/index.js",
   "license": "MIT",
+  "homepage": "https://github.com/flegall/rogntudju",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flegall/rogntudju.git",
+    "directory": "packages/connect"
+  },
   "publishConfig": {
     "access": "public"
   },
